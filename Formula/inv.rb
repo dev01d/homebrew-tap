@@ -11,22 +11,22 @@ class Inv < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dev01d/inv/releases/download/0.2.0/inv_0.2.0_darwin_x86_64.tar.gz"
-      sha256 "068fd56e75c988708e76e22e2be897dcec3e6e4661f3cf75047820f9692db151"
+      sha256 "a9ce9fd2ee5b29e88e8aeb68df0cbeba1295857e0205e8b1af18dfdf35ba95f2"
     end
     if Hardware::CPU.arm?
       url "https://github.com/dev01d/inv/releases/download/0.2.0/inv_0.2.0_darwin_arm64.tar.gz"
-      sha256 "b3b021fe5bddcb045011d041cf5cb59807463687a2ba41f5b7a0a9e2802d84e2"
+      sha256 "430f062d736f3d5e3488933382775b82f25bcc8165aff48c48a3fc743b1ff2ab"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/dev01d/inv/releases/download/0.2.0/inv_0.2.0_linux_x86_64.tar.gz"
-      sha256 "b1291839062f0b2e79fa9cf8a3fc46c5eebb062bef802d1bf8b54ebacea6ed3a"
+      sha256 "11679163ecf63a6839caba60e6d45ee3a4f05845c8ac555d03a3cfa273865a73"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/dev01d/inv/releases/download/0.2.0/inv_0.2.0_linux_arm64.tar.gz"
-      sha256 "89d105aa9d3eaef109330c08ac75f8b5036a9c2540b52592d90a62dcd710dd8f"
+      sha256 "2136fe16cd01ae25d76b3a66b5c341d3c86954dc980a83fe9d4d4d66fca348d2"
     end
   end
 
