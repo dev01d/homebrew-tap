@@ -5,20 +5,20 @@
 class Inv < Formula
   desc "A formatted investigation tool"
   homepage "https://github.com/dev01d/inv"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/dev01d/inv/releases/download/0.2.0/inv_0.2.0_darwin_arm64.tar.gz"
-      sha256 "7119cf4e64f30dec483877bce1c901378b8fa3c74024f88410f9e56617f5a6b1"
+    if Hardware::CPU.intel?
+      url "https://github.com/dev01d/inv/releases/download/0.2.1/inv_0.2.1_darwin_x86_64.tar.gz"
+      sha256 "dd032fbfe636aa7ffcf45debd4f2a99d6c814048a67dddd4aad040e453249268"
 
       def install
         bin.install "inv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dev01d/inv/releases/download/0.2.0/inv_0.2.0_darwin_x86_64.tar.gz"
-      sha256 "fc0cb615005e71349d86e65b99235a614e0e23dd9f6c0f3f3144095e63dc3311"
+    if Hardware::CPU.arm?
+      url "https://github.com/dev01d/inv/releases/download/0.2.1/inv_0.2.1_darwin_arm64.tar.gz"
+      sha256 "a6c5c301ae9711fe45569f2addd33605d87951bab2901d2f5279deca4fa596de"
 
       def install
         bin.install "inv"
@@ -28,16 +28,16 @@ class Inv < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dev01d/inv/releases/download/0.2.0/inv_0.2.0_linux_x86_64.tar.gz"
-      sha256 "220943ed88afb91e42bfbdd85d0faf223b9bd7ea7ae48a246d673f2a837fd2ae"
+      url "https://github.com/dev01d/inv/releases/download/0.2.1/inv_0.2.1_linux_x86_64.tar.gz"
+      sha256 "c4b5ba1f6ec1c43c52864660fb20efbfdaf419e530bc4eadb0635d248eb437de"
 
       def install
         bin.install "inv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dev01d/inv/releases/download/0.2.0/inv_0.2.0_linux_arm64.tar.gz"
-      sha256 "b4161e7f1b859c99f76db7a510f49d3997220a6342836e5e4570761132d4dca4"
+      url "https://github.com/dev01d/inv/releases/download/0.2.1/inv_0.2.1_linux_arm64.tar.gz"
+      sha256 "d9f28144999c95884def022c54365475f697a051a8ffb6a9a988d93d38b8e95c"
 
       def install
         bin.install "inv"
