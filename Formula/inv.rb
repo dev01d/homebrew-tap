@@ -5,20 +5,20 @@
 class Inv < Formula
   desc "A formatted investigation tool"
   homepage "https://github.com/dev01d/inv"
-  version "0.2.2"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dev01d/inv/releases/download/0.2.2/inv_0.2.2_darwin_x86_64.tar.gz"
-      sha256 "6ecaad18e03330f3219c046ad706dc9dcf69a9dcfdf7153224189f36ff4d1a96"
+    if Hardware::CPU.arm?
+      url "https://github.com/dev01d/inv/releases/download/0.3.0/inv_0.3.0_darwin_arm64.tar.gz"
+      sha256 "b6c9d270b83da76f430f1e3ab35263f5e5d003e197516773038228ea0e7fc967"
 
       def install
         bin.install "inv"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dev01d/inv/releases/download/0.2.2/inv_0.2.2_darwin_arm64.tar.gz"
-      sha256 "339497382e052a05705863dc771c45b9889f2baa8db7d8d7d02119d320cd3bfa"
+    if Hardware::CPU.intel?
+      url "https://github.com/dev01d/inv/releases/download/0.3.0/inv_0.3.0_darwin_x86_64.tar.gz"
+      sha256 "fd43c764355d919ca352d80ea60d8345fe09cc8fc84e235922f14862b37c6f40"
 
       def install
         bin.install "inv"
@@ -27,17 +27,17 @@ class Inv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dev01d/inv/releases/download/0.2.2/inv_0.2.2_linux_arm64.tar.gz"
-      sha256 "f92256abdfcce46e76ac8f0003d023a6f664035d6ca227329f60be219cc2f85d"
+    if Hardware::CPU.intel?
+      url "https://github.com/dev01d/inv/releases/download/0.3.0/inv_0.3.0_linux_x86_64.tar.gz"
+      sha256 "4c7546f62c7c56d8e515f8f91dcfc7e419493477b624960ca3e29d463da76282"
 
       def install
         bin.install "inv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dev01d/inv/releases/download/0.2.2/inv_0.2.2_linux_x86_64.tar.gz"
-      sha256 "7ad1e78a463da0584472bb90e2922c6a172f821bb2e1e4e7d684012d837b885a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dev01d/inv/releases/download/0.3.0/inv_0.3.0_linux_arm64.tar.gz"
+      sha256 "63e122f426f31cc510409845b380aa307735b8e6fd6bf522eddd4007e7efe994"
 
       def install
         bin.install "inv"
