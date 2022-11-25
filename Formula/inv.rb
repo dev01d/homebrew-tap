@@ -5,20 +5,20 @@
 class Inv < Formula
   desc "A formatted investigation tool"
   homepage "https://github.com/dev01d/inv"
-  version "0.3.1"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dev01d/inv/releases/download/0.3.1/inv_0.3.1_darwin_arm64.tar.gz"
-      sha256 "f902253f19fcbd2422887ff86598f0cc7ca8b483a0076c0ffef7556533443593"
+      url "https://github.com/dev01d/inv/releases/download/1.0.0/inv_1.0.0_darwin_arm64.tar.gz"
+      sha256 "0a62b4a8eb4de6cae295d8d52c00e0dcd1485efecc13c95fb0219472a5d45199"
 
       def install
         bin.install "inv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dev01d/inv/releases/download/0.3.1/inv_0.3.1_darwin_x86_64.tar.gz"
-      sha256 "06a1117e7a155605e89093a95c6de524cffde978a889e454546d4cc0721bf59b"
+      url "https://github.com/dev01d/inv/releases/download/1.0.0/inv_1.0.0_darwin_x86_64.tar.gz"
+      sha256 "a23dc0dc174bf3ffff31807e165e0223f9079dff016ada2d76e00fe9e41b97f9"
 
       def install
         bin.install "inv"
@@ -28,16 +28,16 @@ class Inv < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dev01d/inv/releases/download/0.3.1/inv_0.3.1_linux_x86_64.tar.gz"
-      sha256 "da5304656e3cd2edcd50f99332641325249cc5b0d973e6a89eb34b8e0d7d59c8"
+      url "https://github.com/dev01d/inv/releases/download/1.0.0/inv_1.0.0_linux_x86_64.tar.gz"
+      sha256 "ef001c61ba89fbdb1d5f353ca3c98bac27d5cc8ce3e23374b3637ed4b45b860b"
 
       def install
         bin.install "inv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dev01d/inv/releases/download/0.3.1/inv_0.3.1_linux_arm64.tar.gz"
-      sha256 "aabea045aced03832c68adb02442bfe2d1c040f9d4eb3afea4c7ac2dde763a8a"
+      url "https://github.com/dev01d/inv/releases/download/1.0.0/inv_1.0.0_linux_arm64.tar.gz"
+      sha256 "5f9d0d3d8c898eb16b36c8ee86f54fafa1b81a3aad502a583ce88168f53a0365"
 
       def install
         bin.install "inv"
