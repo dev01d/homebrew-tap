@@ -10,7 +10,7 @@ class Inv < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dev01d/inv/releases/download/1.1.0/inv_Darwin_x86_64.tar.gz"
-      sha256 "2f9c2d9aa647759ea4930b7731e87455734807e274fa6b6582f35a7c07758af6"
+      sha256 "34d840275586ec115232dd777c75a1b623e1de266b8b7c3412ea8af0ff34b14f"
 
       def install
         bin.install "inv"
@@ -18,7 +18,7 @@ class Inv < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/dev01d/inv/releases/download/1.1.0/inv_Darwin_arm64.tar.gz"
-      sha256 "a2bef0e5581ddb8ad283d40313ca8113265385744030be623a48c9567a22cb26"
+      sha256 "1ea3b42544a62970ff29f5d111307a749162389d6d3184af0be93008779c8ed9"
 
       def install
         bin.install "inv"
@@ -29,7 +29,7 @@ class Inv < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/dev01d/inv/releases/download/1.1.0/inv_Linux_x86_64.tar.gz"
-      sha256 "de582a7814df6a32a9481cb652020a4133ab3acd13a12131900a8507f74693e3"
+      sha256 "4ab6d6e8893796a3a277e3c922004f9973cea53a15cbb1952e5e145fc34129a4"
 
       def install
         bin.install "inv"
@@ -37,7 +37,7 @@ class Inv < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/dev01d/inv/releases/download/1.1.0/inv_Linux_arm64.tar.gz"
-      sha256 "ca31b7703c9c387380a2fe28806dd78723d91406051c83b40ef18725166e67b3"
+      sha256 "e6c7cb06935444b187806d4f07e8474ac73802f002078f61fe129b64c1e205da"
 
       def install
         bin.install "inv"
